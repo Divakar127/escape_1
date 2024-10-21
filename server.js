@@ -12,9 +12,11 @@ dotenv.config();  // Load environment variables from .env
 const app = express();
 const port = process.env.PORT || 5000;
 
+// Update allowedOrigins to include your deployed frontend URL
 const allowedOrigins = [
-  'http://localhost:5173',
-  'http://192.168.246.179:5173'
+  'http://localhost:5173', // Local development
+  'http://192.168.246.179:5173', // Another local development URL
+  'https://escape-front-2yrp.onrender.com' // Deployed frontend
 ];
 
 app.use(express.json());
